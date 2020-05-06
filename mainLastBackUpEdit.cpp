@@ -1,3 +1,14 @@
+/*
+This code is for presentation purposes for my CV appliances
+I am a junior developer
+dimitrisnikolopoulos.20@gmail.com
+*/
+
+/*
+Description:
+      This program ...
+*/
+
 #include <iostream>
 #include <vector>
 #include <cctype>
@@ -9,16 +20,9 @@
   #include <stdlib.h>
 #endif
 
-
-//  structure company {
-        // newspares [54.000][][][][][][]  p.x. newaspapers[0] -- Monday - 54.000
-        // magazines [][][][][][][]
-//}
-
-// structure company aetos1, aetos2, aetos3 ...
 using  namespace std;
 
-class Company{
+class Company{  //Class Company for creating Company objects
 
     private:
 
@@ -74,7 +78,7 @@ class Company{
 
 };
 
-void printLogo(){
+void printLogo(){   //
     cout << endl << endl;
     cout << "\t\t\t\t\t***********************" << endl;
     cout << "\t\t\t\t\t*** EAGLE 'A' STAND ***" << endl;
@@ -546,7 +550,7 @@ int main() {
                                 for(j = 0; j < DAYSOFWEEK; j++){
                                     result += companies[i].getNewspapersAmount(j);
                                 }
-                                cout << endl << endl << companies[i].getName() << ": € " << ceil(((result * 4 * usrMonthIn) / companies.size()) * 1.5 * (0.6 / 100)) << endl;
+                                cout << endl << endl << companies[i].getName() << ": Â€ " << ceil(((result * 4 * usrMonthIn) / companies.size()) * 1.5 * (0.6 / 100)) << endl;
                             }
                     break;
 
