@@ -1,71 +1,63 @@
-// DIMITRIS NIKOLOPOULOS - technikos logismikou - 2NPLP01
-
-// entoli gia na simberilavei o compiler ti vasiki vivliothiki I/O se header file
 #include <stdio.h>
-// entoli gia na simberilavei o compiler ti vasiki vivliothiki synartisewn se header file
 #include <stdlib.h>
 
-// kiria synartisi
 int main()
 {
-    // dilosi metavlitwn kai arxikopoiisi tis metavlitis 'i' me 0, i opoia tha xrisimopoiithi ws metritis gia tis 4 eisodous timwn thermokrasiwn apo to xristi
     int a[4], temp, j, i = 0;
 
-    // morphopoiisi titlou programmatos
     printf("\n\t *****************************\n");
     printf("\t ** Weather report analysis **\n");
     printf("\t *****************************\n");
 
     printf("\n\t ..enter 4 temperature values to display the \"Weather Report\"...\n\n");
 
-    // vronchos epanalipsis gia 4 perasmata tou elenxou
+    // Repeat loop for four passages of control
     while(i < 4){
-        do{             // sinexis vronchos epanalipsis me synthiki eksodou 'while' sto telos tou block
-            printf("\n\t Enter number %d in range of [-10 and 50]: ", i + 1);  // 'i + 1' gia na emfanisei stin othoni tin epomeni arithmimeni trexousa eisodo xristi
-            scanf("%d", &a[i]);        // to programma diavazei ton arithmo pou ekxorise o xristis, o opoios einai stoixeio tou pinaka 'a' kai kataxwreitai antistoixa stis theseis tou pinaka
-        }while(!(a[i] >= -10 && a[i] <= 50));    // telos vronchou epanalipsis 'do while' me synthiki eksodou <<gia oso to kathe stoixeio tou pinaka 'a' DEN einai sto evros timwn -10 kai 50>>
+        do{             // Continuous loop of repetition with exit condition 'while' at the end of the code block
+            printf("\n\t Enter number %d in range of [-10 and 50]: ", i + 1);  // 'i + 1' to display on the screen the next numbered current user input
+            scanf("%d", &a[i]);        // The program reads the number assigned by the user, which is an element of table 'a' and is registered respectively in the positions of the table
+        }while(!(a[i] >= -10 && a[i] <= 50));    // End of 'do while' repeating loop  with output condition << as long as each element of table 'a' is not in the price range of -10 and 50
 
-        i++;  // stin arxi o metritis exei timi = 0, se periptosi pou o xristis dosei arithmo mesa sto ektimwmeno evros timwn, tote o elenxos tha anevasei ton metriti kata 1 monada kai tha afksanetai kata 1 monada stin periptosi pou o xristis eisagei (4) arithmous entos tou evrous.
+        i++;  // In the beginning the meter has a value equal to 0, in case the user gives a number within the estimated price range, then the control will increase the meter by one unit and will increase by one unit in case the user enters four numbers inside the range.
     }
 
-    // logiki gia eisagwgi twn stoixeiwn eisodou se pinaka kai logiki taksinomisis
-    for(i = 0; i < 4; i++){           // to arxiko stoixeio tou pinaka
-       for(j = i + 1; j < 4; j++){    // to epomeno stoixeio tou pinaka
-            if(a[i] > a[j]){          // ean to arxiko stoixeio tou pinaka einai megalitero apo to epomeno stoixeio
-                temp = a[i];          // tote vale sto 'temp' tin timi tou arxikou stoixeiou
-                a[i] = a[j];          // vale sto arxiko stoixeio tin timi tou epomenou
-                a[j] = temp;          // kai sto epomeno, vale tin timi pou exei to 'temp'
+    // Logic for entering the input data in the array and classification logic (bubble sort)
+    for(i = 0; i < 4; i++){           // the first element of the array
+       for(j = i + 1; j < 4; j++){    // the next item in the array
+            if(a[i] > a[j]){          // if the first element of the array is larger than the next element
+                temp = a[i];          // then set the value of the first element to 'temp'
+                a[i] = a[j];          // put in the first element the value of the next
+                a[j] = temp;          // and in the next put the price that 'temp' has
             }
        }
     }
 
-    // diaxwristiki grammi
     printf("\n\n\t ---------------------------------------------------------------------------------\n");
     printf(" Results:\n");
 
-    for(i = 0; i < 4; i++){  //vronchos epanalipsis gia ektipwsi 4 perasmatwn tou elenxou
-        if(a[i] < 0){     // sinthiki periptosis pou i timi tou stoixeiou tou pinaka einai mikroteri tou 0
-            printf("\n\t For the temperature %d you've entered the weather report is: \"Freezing weather\"", a[i]); //synodeftiko lektiko kai parametriki eisodos trexousas timis eisodou
+    for(i = 0; i < 4; i++){  //repetition loop to print four passes of the control
+        if(a[i] < 0){     // condition in which the value of the array element is less than 0
+            printf("\n\t For the temperature %d you've entered the weather report is: \"Freezing weather\"", a[i]);
         }
-        else if(a[i] >= 0 && a[i] < 10){  // sinthiki periptosis pou i timi tou stoixeiou tou pinaka einai sto evros timwn 0 kai 9
+        else if(a[i] >= 0 && a[i] < 10){  // condition that the value of the array element is in the range of values 0 and 9
             printf("\n\t For the temperature %d you've entered the weather report is: \"Very Cold weather\"", a[i]);
         }
-        else if(a[i] >= 10 && a[i] < 20){  // sinthiki periptosis pou i timi tou stoixeiou tou pinaka einai sto evros timwn 10 kai 19
+        else if(a[i] >= 10 && a[i] < 20){  // condition that the value of the array element is in the range of values 10 and 19
             printf("\n\t For the temperature %d you've entered the weather report is: \"Cold weather\"", a[i]);
         }
-        else if(a[i] >= 20 && a[i] < 30){  // sinthiki periptosis pou i timi tou stoixeiou tou pinaka einai sto evros timwn 20 kai 29
+        else if(a[i] >= 20 && a[i] < 30){  // condition that the value of the array element is in the range of values 20 and 29
             printf("\n\t For the temperature %d you've entered the weather report is: \"Normal in Temp\"", a[i]);
         }
-        else if(a[i] >= 30 && a[i] < 40){  // sinthiki periptosis pou i timi tou stoixeiou tou pinaka einai sto evros timwn 30 kai 39
+        else if(a[i] >= 30 && a[i] < 40){  // condition that the value of the array element is in the range of values 30 and 39
             printf("\n\t For the temperature %d you've entered the weather report is: \"It's Hot\"", a[i]);
         }
-        else if(a[i] >= 40){  // sinthiki periptosis pou i timi tou stoixeiou tou pinaka einai megaliteri i isi tou 40
+        else if(a[i] >= 40){  // a condition in which the value of the array element is greater than or equal to 40
             printf("\n\t For the temperature %d you've entered the weather report is: \"It's Very Hot\"", a[i]);
         }
     }
 
-    printf("\n\n");  // xoros kenou 2 grammwn meta tin ektipwsi twn apotelesmatwn
+    printf("\n\n");
 
-    getch();  // entoli gia anagkastiki eisodo opoioudipote pliktrou (apo to xristi) me skopo tin pafsi tou programmatos. Einai aparaititi stin periptosi ektelesis tou .exe arxeiou gia na mporei o xristis na vlepei ta apotelesmata (diaforetika klini to parathiro ektelesis tou programmatos).
-    return 0;  // entoli epistrofis tis kirias sinartisis, pou stin sigkekrimeni periptosi DEN epistrefei tipota
+    getch();  
+    return 0;
 }
