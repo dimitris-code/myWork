@@ -1,7 +1,6 @@
 /*
-3x + 5y * 7z = ? me poio arxeio timwn thelei o xristis
-na anoiksei (a.dat, b.dat or c.dat)?
-
+3x + 5y * 7z = ?
+with which price file the user wants to open (a.dat, b.dat or c.dat)?
 */
 
 #include <iostream>
