@@ -4,7 +4,7 @@ with which price file the user wants to open (a.dat, b.dat or c.dat)?
 */
 
 #include <iostream>
-#include <fstream>
+#include <fstream>  //stream class to both read and write from/to files
 
 using namespace std;
 
@@ -25,7 +25,7 @@ int main() {
     counter = 1;
     cout << "\nEnter 9 values for x, y, z accordingly to represent the expression 3x + 5y * 7z (press <Enter> each time)\n" << endl;
 
-    ofstream outfile;
+    ofstream outfile;  //constructs an ofstream object
 
     outfile.open(usrFileName1 + ".dat");
 
@@ -51,7 +51,7 @@ int main() {
 
     outfile.close();
 
-    ifstream infile;
+    ifstream infile;  //opens the file
 
     cout << endl << "For the expression 3x + 5y * 7z choose values for x, y, z of:\n";
 
