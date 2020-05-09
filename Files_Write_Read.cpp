@@ -11,7 +11,7 @@ using namespace std;
 int main() {
   int usrChoice, x, y, z, i, j, counter = 1;
   char temp;
-  cout << "Καλησπέρα!" << endl;
+  cout << "Hello!" << endl;
   cout << "Enter 9 values for x, y, z accordingly to represent the expression 3x + 5y * 7z (press <Enter> each time)" << endl;
 
   ofstream outfile;
