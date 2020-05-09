@@ -1,3 +1,6 @@
+//THIS PROGRAM MAKES USE OF HEADER FILE
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "stringBorder.h"
