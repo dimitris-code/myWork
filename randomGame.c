@@ -1,3 +1,6 @@
+//THIS IS A GAME WHERE THE USER JUST HITS <Enter> AND THE COMPUTER RETURNS A RANDOM QUOTATION
+//PURPOSE OF THIS PROGRAM IS TO USE FILE POINTERS
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
