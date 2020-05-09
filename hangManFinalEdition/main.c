@@ -64,6 +64,7 @@ int checkEqual(char secret[], char dashes[]){
 
 //------------------------------------------------
 
+//graphics
 void drawHangMan(int usrErrors){
     if(usrErrors == 9){
         printf("\n\t|\n\t|\n\t|\n\t|\n\t|\n\t|\n\t|\n      __|__\n     //////");
@@ -135,7 +136,7 @@ void getRandomWordFromFile(char buff[], char fileName[], int lengthOfFile, int m
 
 int main()
 {
-        int i, ch, usrIn, chkRound = 0, counter = 0, debug = 0; //debug magic technic to monitor some values (when coding). It's boolean, if it's False then the results will not appear on the screen
+        int i, ch, usrIn, chkRound = 0, counter = 0, debug = 0; //debug technic to monitor some values (when coding). It's boolean, if it's False then the results will not appear on the screen
         char input;
         char secret[MAX];   // RANDOM word
         char dashes[MAX];  // -----
@@ -147,7 +148,7 @@ int main()
 
         system("color 0a");  //black background, green fonts
 
-        srand(time(0));  //initialize with 0 (zero) once in the beginning of the program      #include <ctime.h>
+        srand(time(0));  //initialize with 0 (zero) once in the beginning of the program
 
         do{  // loop for playing again
 
