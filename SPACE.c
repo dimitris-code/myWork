@@ -1,3 +1,12 @@
+/*
+In this program I use structures to store in the memory location spaceships objects
+and the control prompts the user to enter new age values. After, it prints out on the screen
+the updated members of the structures in ascending order and, finally it prompts the user to
+change a spaceship's name.
+
+THIS CODE IS WRITTEN ON 'Repl it' ONLINE COMPILER
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
@@ -5,9 +14,9 @@
 #include <time.h>
 #include <ctype.h>
 
-// Η κύρια συνάρτηση βρίσκεται στη γραμμή 373
+//main function is at line 373
 
-//δήλωση δομής με το όνομα Spaceship και μέλη έναν πίνακα χαρακτήρων, απροσδιορίστου μεγέθους και τρεις int
+//structure declaration named 'Spaceship' that includes as members: an array of undetermined size and, three integer variables 
 struct Spaceship {
     char *name;
     int age;
@@ -15,22 +24,22 @@ struct Spaceship {
     int crew;
 };
 
-//δημιουργία διαστημοπλοίων-αντικειμένων στο χώρο μνήμης (RAM / stack)
+//creating spaceships-objects in the memory space (RAM / stack)
 struct Spaceship *Spaceship_create(char *name, int age, int warp_speed, int crew)
 {
-    struct Spaceship *who = malloc(sizeof(struct Spaceship));  //7bytes σε 16-bit compiler, 13bytes σε 32-bit compiler
-    //η assert() επιτρέπει να γραφτούν στο standard error file διαγνωστικές πληροφορίες 
-    assert(who != NULL);  //αν επιστραφεί False, τότε η assert() τυπώνει μήνυμα λάθους μέσω της stderr και διακόπτει το πρόγραμμα μέσω της abort()
+    struct Spaceship *who = malloc(sizeof(struct Spaceship));  //7bytes in 16-bit compiler, 13bytes in 32-bit compiler
+    //assert() predefined function allows diagnostic information to be written to the standard error file 
+    assert(who != NULL);  //if False is returned, then assert () prints an error message via stderr and interrupts the program via abort ()
 
-    who->name = strdup(name);  //duplicate the string "name". Η μνήμη διατίθεται μέσω της malloc() και έτσι μπορεί να αποδεσμευτεί μέσω της free() και επιστρέφει ένα δείκτη στο πρώτο κελί του αντιγράφου του πίνακα name 
-    who->age = age;  //Έχουμε πρόσβαση στα μέλη της δομής χρησιμοποιώντας -> επειδή το όνομα της δομής είναι ένας δείκτης σε δομή
+    who->name = strdup(name);  //duplicate the string "name". The memory is available via malloc () and so can be released via free () and returns a pointer to the first cell of the copy of the name array
+    who->age = age;  //We have access to the members of the structure using -> because the name of the structure is a pointer to a structure
     who->warp_speed = warp_speed;
     who->crew = crew;
 
     return who;
 }
 
-//καταστροφή των ανάλογων διαστημοπλοίων από το χώρο μνήμης (RAM / stack)
+//destruction of similar spaceships from the memory space (RAM / stack)
 void Spaceship_destroy(struct Spaceship *who)
 {
     assert(who != NULL);
@@ -63,7 +72,7 @@ int colorNums(int num){
     return num;
 }
 
-//εκτύπωση στην οθόνη των χαρακτηριστικών των ανάλογων διαστημοπλοίων
+//print out on the screen the characteristics of similar spaceships
 void Spaceship_print(struct Spaceship *who){
     //printf("\tName: "); colorIt2(who->name, 1); printf("\n");
     printf("\t%s", colorIt("Name: ", 5));
@@ -76,7 +85,7 @@ void Spaceship_print(struct Spaceship *who){
     colorNums(who->crew);
 }
 
-// τύπωσε τα χαρακτηριστικά τους και που.. βρίσκονται στην μνήμη του υπολογιστή!
+// print their characteristics and, the memory location
 void spcPrintMemLoc(struct Spaceship *who1, struct Spaceship *who2){
     printf("\n\n\t------------------------------------------");
     printf("\n\t%s is at memory location: %p\n", who1->name, who1);
@@ -91,7 +100,7 @@ void spcPrintMemLoc(struct Spaceship *who1, struct Spaceship *who2){
     Spaceship_print(who2);
 }
 
-// άλλαξε τις τιμές των χαρακτηριστικών τους και τύπωσε αυτές πάλι.
+// change the values of their characteristics and print them again.
 void oldSpcNewValues(struct Spaceship *who1, struct Spaceship *who2){
     who1->age += 20;
     who1->warp_speed -= 2;
@@ -101,24 +110,24 @@ void oldSpcNewValues(struct Spaceship *who1, struct Spaceship *who2){
     who2->crew += 40;
     
     printf("\n\n\t---------------------------------------------------\n");
-    printf("\tΕκτύπωση ανανεωμένων τιμών %s και %s:\n", who1->name, who2->name);
+    printf("\tPrinting of updated values %s and %s:\n", who1->name, who2->name);
     printf("\t---------------------------------------------------\n\n");
     Spaceship_print(who1);
     printf("\n");
     Spaceship_print(who2);
 }
 
-//εκτυπωση των χαρακτηριστικών των δύο νέων διαστημοπλοίων
+//printing of the characteristics of the two new spaceships
 void newSpaceships_print(struct Spaceship *who1, struct Spaceship *who2){
     printf("\n\n\t-------------------------------------------------------------------------\n");
-    printf("\tΕκτύπωση τιμών των δύο νέων διαστημοπλοίων %s και %s:\n", who1->name, who2->name);
+    printf("\tValues of two new spaceships %s και %s:\n", who1->name, who2->name);
     printf("\t-------------------------------------------------------------------------\n\n");
     Spaceship_print(who1);
     printf("\n");
     Spaceship_print(who2);
 }
 
-//ο χρήστης εισάγει τις νέες τιμές των διαστημοπλοίων
+//the user enters the new spaceship values
 void usrSpaceshipsNewAgeValue(struct Spaceship *spc){
     int usrSpcValues, i;
 
@@ -132,7 +141,7 @@ void usrSpaceshipsNewAgeValue(struct Spaceship *spc){
         getchar();
         //fflush(stdin);
     }
-    spc->age = usrSpcValues;  //βάλε στο συγκεκριμένο spc->age ότι έχει η μεταβλητή usrSpcValues
+    spc->age = usrSpcValues;  //put in the specific spc-> age the variable usrSpcValues content
     
 }
 
@@ -141,7 +150,7 @@ void spcAgeAscentingPrint(struct Spaceship *who1, struct Spaceship *who2, struct
     int spcAges[4], i, j, temp, n = 4;
 
     printf("\n\n\t--------------------------------------------------------\n");
-    printf("\tΕκτύπωση τιμών διαστημοπλοίων ανά άυξουσα σειρά ηλικίας:\n");
+    printf("\tPrinting spaceships values per growing age range:\n");
     printf("\t--------------------------------------------------------\n\n");
     spcAges[0] = who1->age;
     spcAges[1] = who2->age;
@@ -158,7 +167,6 @@ void spcAgeAscentingPrint(struct Spaceship *who1, struct Spaceship *who2, struct
         }
     }
 
-    //[20][35][37][40]
     i = 0;
     while(i < 4){
         if(who1->age == spcAges[i]){
@@ -185,7 +193,7 @@ void spcCrewAscentingPrint(struct Spaceship *who1, struct Spaceship *who2, struc
     int spcCrew1[4], spcCrew2[4], spcCrew = 0, i, j, temp, n = 4;
 
     printf("\n\t-----------------------------------------------------------");
-    printf("\n\tΕκτύπωση τιμών διαστημοπλοίων ανά άυξουσα σειρά πληρώματος:\n");
+    printf("\n\tPrinting spaceship values per growing crew:\n");
     printf("\t-----------------------------------------------------------\n\n");
 
     spcCrew1[0] = who1->crew;
@@ -194,6 +202,7 @@ void spcCrewAscentingPrint(struct Spaceship *who1, struct Spaceship *who2, struc
     spcCrew1[3] = who4->crew;
 
     //sort spaceships by crew (find largest element)
+    //bubble sort
     for (i = 0; i < n; ++i){
         for (j = i + 1; j < n; ++j){
             if (spcCrew1[i] < spcCrew1[j]){
@@ -266,7 +275,7 @@ void spcCrewAscentingPrint(struct Spaceship *who1, struct Spaceship *who2, struc
             }
         }
     }
-    //[20][35][37][40]
+    
     i = 0;
     while(i < 4){
         if(who1->crew == spcCrew2[i]){
@@ -289,7 +298,7 @@ void spcCrewAscentingPrint(struct Spaceship *who1, struct Spaceship *who2, struc
     }
 }
 
-//συνάρτηση τυχαίας επιλογής αριθμού από το 1 έως και το 9 και ανάθεση τιμής στο ανάλογο διαστημόπλοιο
+//random number selection function from 1 to 9 and assigning a value to the corresponding spacecraft
 int randSpcWarpSpeed(struct Spaceship *who){
     int random = 1;
     random = rand() % 9;
@@ -297,13 +306,12 @@ int randSpcWarpSpeed(struct Spaceship *who){
     return  random;
 }
 
-//sort and print spaceships by warp speed
-//εδώ χρησιμοποίησα τα ονόματα των διαστημοπλοίων γιατί αλλίως δεν έβγαινε σωστό αποτέλεσμα
+//sort and print spaceships per warp speed
 void spcWarpSpeedAscentingPrint(struct Spaceship *star_trek, struct Spaceship *pegasos, struct Spaceship *spaceDog3, struct Spaceship *starFighter){
     int spcWarp[4], i, j, temp, n = 4;
 
     printf("\n\t-----------------------------------------------------------\n");
-    printf("\tΕκτύπωση τιμών διαστημοπλοίων ανά άυξουσα σειρά warp speed:\n");
+    printf("\tPrinting spaceships values per warp speed:\n");
     printf("\t-----------------------------------------------------------\n\n");
     spcWarp[0] = star_trek->warp_speed;
     spcWarp[1] = pegasos->warp_speed;
@@ -319,7 +327,7 @@ void spcWarpSpeedAscentingPrint(struct Spaceship *star_trek, struct Spaceship *p
             }
         }
     }
-    //[20][35][37][40]
+    
     i = 0;
     while(i < 4){
         if(star_trek->warp_speed == spcWarp[i]){
@@ -347,7 +355,7 @@ void spaceDog3NamedByUsr(struct Spaceship *who){
     int i;
 
     printf("\n\t---------------------------------------------------------\n");
-    printf("\tΕισαγωγή νέου ονόματος για το Space Dog III από το χρήστη\n");
+    printf("\tUser enters a new name for the SpaceDog III\n");
      printf("\t---------------------------------------------------------\n");
     printf("\n\tEnter new Space Dog III name: ");
     scanf("%s", spcName);
@@ -375,9 +383,9 @@ int main(){
     char spcName[30], ch;
     int i;
 
-    srand(time(0)); // srand() — set seed for rand() function. Αφορά το warp speed
+    srand(time(0)); // srand() — set seed for rand() function. It's about warp speed
 
-    // φτιάξε 2 διαστημόπλοια
+    // construction of two new spaceships
     struct Spaceship *star_trek = Spaceship_create(
             "Star Trek", 32, 64, 140);
 
@@ -390,7 +398,7 @@ int main(){
 
     //-----------------------------------------------------
 
-    //κατασκευή δύο νέων διαστημοπλοίων
+    // construction of two new spaceships
     struct Spaceship *spaceDog3 = Spaceship_create(
             "Spacedog III", 28, 22, 200);
 
@@ -401,7 +409,7 @@ int main(){
     newSpaceships_print(spaceDog3, starFighter);
     
     printf("\n\n\t----------------------------------------------------------");
-    printf("\n\tΕισαγωγή νέων τιμών και των 4 διαστημοπλοίων από το χρήστη\n");
+    printf("\n\tImport of new values of all 4 spaceships by the user\n");
     printf("\t----------------------------------------------------------\n");
     // get new age values
     usrSpaceshipsNewAgeValue(star_trek);
@@ -427,11 +435,11 @@ int main(){
     //user enters new name for Space Dog III
     spaceDog3NamedByUsr(spaceDog3);
 
-    // κατέστρεψε τα από την μνήμη και τα δύο
+    // destroy them both from memory
     Spaceship_destroy(star_trek);
     Spaceship_destroy(pegasos);    
     
-    //μικρότερη ηλικία των δύο ενεργών διαστημοπλοίων
+    //younger age of the two active spaceships
     if(spaceDog3->age < starFighter->age){
         printf("\n\tSpace Dog III age: %d, newest spaceship.\n", spaceDog3->age);
     }
@@ -439,7 +447,7 @@ int main(){
         printf("\n\tStar Fighter age: %d, newest spaceship.\n", starFighter->age);
     }
 
-    //καταστροφή των δύο ενεργών διαστημοπλοίων
+    //destruction of the two active spaceships
     //Spaceship_destroy(spaceDog3);
     //Spaceship_destroy(starFighter);
 
