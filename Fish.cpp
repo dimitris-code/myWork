@@ -112,7 +112,7 @@ public:
 
     void printNet() {
         int i = 1;
-        cout << "Net contains these fish: " << endl;   // arithmetic operators: +,-, *, /, %, ++, -- relationsal operators: ==, !=, >=, <=, >, logical operators &&, ||, !
+        cout << "Net contains these fish: " << endl;
         if (!net.empty()) {
             for (vector<Fish>::iterator it = net.begin(); it != net.end(); ++it) {
                 cout << "\n-------------------- (" << i << ")" << endl;
@@ -130,7 +130,7 @@ public:
 class Boat {
 private:
     string name;
-    vector<Fisherman> crew;  // <fman1, fman2, ..., fman6>
+    vector<Fisherman> crew;
     vector<int> score;
     vector<Fish> catchX;
 
@@ -256,8 +256,8 @@ vector<Fish> init_waters(int max_fish_no) {
     static vector<Fish> waters;
 
 
-    map<string, int> names{ {"carp", 14}, {"catfish", 170}, {"cod", 53}, {"salmon", 26}, {"whiteShark", 1100}, {"burbot", 19}, {"sunfish", 1000}, {"bluefin tuna", 380}, {"red snapper", 13}, {"albacore", 33} };  // 13, 14, 19, 26, 33, 53, 170, 380, 1000, 1100
-    // length -->  1100 x ? = 6;
+    map<string, int> names{ {"carp", 14}, {"catfish", 170}, {"cod", 53}, {"salmon", 26}, {"whiteShark", 1100}, {"burbot", 19}, {"sunfish", 1000}, {"bluefin tuna", 380}, {"red snapper", 13}, {"albacore", 33} };
+    
 
     //create 50 fish with random type, weight, difficulty
     // 1
@@ -280,15 +280,15 @@ vector<Fish> init_waters(int max_fish_no) {
         }
         else {
             thisDifficulty = 3;
-        }																     //0x377abba
-        waters.push_back(Fish(random_key, randomWeight, thisDifficulty));  // RAM [[][][][][][][][][][][]......[]]
+        }																    
+        waters.push_back(Fish(random_key, randomWeight, thisDifficulty));
     }
 
     return waters;
 
 }
 
-//---------------------------------------------------------- mains
+//---------------------------------------------------------- main
 
 
 int main() {
@@ -299,7 +299,7 @@ int main() {
     srand(time(0));
 
     //1
-    waters = init_waters(max_fish_no);// waters --> 0x377abba
+    waters = init_waters(max_fish_no);
 
     //2
     for (i = 0; i < max_fish_no; i++) {
