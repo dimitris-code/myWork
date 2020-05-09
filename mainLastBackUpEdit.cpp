@@ -1,10 +1,4 @@
 /*
-This code is for presentation purposes for my CV
-I am a junior developer
-dimitrisnikolopoulos.20@gmail.com
-*/
-
-/*
 Description:
       This program is for print distribution business
 */
