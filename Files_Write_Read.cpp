@@ -1,7 +1,6 @@
 /*
-3x + 5y * 7z = ? me poio arxeio timwn thelei o xristis
-na anoiksei (a.dat, b.dat or c.dat)?
-
+In this program the control prompts the user to enter 9 values refering to x, y, z.
+Given the 3x + 5y * 7z = ? with which price file the user wants to open the result? (a.dat, b.dat or, c.dat)
 */
 
 #include <iostream>
