@@ -1,14 +1,15 @@
 /*
-This code is for presentation purposes for my CV appliances
+This code is for presentation purposes for my CV
 I am a junior developer
 dimitrisnikolopoulos.20@gmail.com
 */
 
 /*
 Description:
-      This program ...
+      This program is for print distribution business
 */
 
+//pre-processor directives
 #include <iostream>
 #include <vector>
 #include <cctype>
@@ -32,7 +33,7 @@ class Company{  //Class Company for creating Company objects
 
     public:
 
-        Company(){}
+        Company(){}  //empty constructor
 
         Company(string name){
 
@@ -40,6 +41,7 @@ class Company{  //Class Company for creating Company objects
 
         }
 
+    //other methods  
         void setNewspapersAmount(int amount, int index){
 
             newspapers[index] = amount;
@@ -63,7 +65,8 @@ class Company{  //Class Company for creating Company objects
             return magazines[index];
 
         }
-
+        
+      //getters & setters
         void setName(string name){
 
             this->name = name;
@@ -78,7 +81,7 @@ class Company{  //Class Company for creating Company objects
 
 };
 
-void printLogo(){   //
+void printLogo(){
     cout << endl << endl;
     cout << "\t\t\t\t\t***********************" << endl;
     cout << "\t\t\t\t\t*** EAGLE 'A' STAND ***" << endl;
@@ -86,7 +89,7 @@ void printLogo(){   //
 }
 
 
-int showBasicMenu(){
+int showBasicMenu(){  //prompt the user to select options from main menu
 
     int num;
 
@@ -111,7 +114,7 @@ int showBasicMenu(){
     return num;
 }
 
-int showMenuCaseOf1_1(){
+int showMenuCaseOf1_1(){  //submenu
     int num;
     do{
                 if (system("CLS")) system("clear");
@@ -127,7 +130,7 @@ int showMenuCaseOf1_1(){
     return num;
 }
 
-int showMenuCaseOf3(){
+int showMenuCaseOf3(){  //submenu
 
     int num;
 
@@ -144,7 +147,7 @@ int showMenuCaseOf3(){
     return num;
 }
 
-int showMenuCaseOf4(){
+int showMenuCaseOf4(){  //submenu
 
     int num;
 
@@ -162,7 +165,7 @@ int showMenuCaseOf4(){
 
 }
 
-int showMenuCaseOf5(){
+int showMenuCaseOf5(){  //submenu
 
     int num;
 
@@ -181,7 +184,7 @@ int showMenuCaseOf5(){
 
 }
 
-int showMenuCaseOf6(){
+int showMenuCaseOf6(){  //submenu
 
     int num;
 
@@ -200,7 +203,7 @@ int showMenuCaseOf6(){
 
 }
 
-int showMenuCaseOf7(){
+int showMenuCaseOf7(){  //submenu
     int num;
 
     do{
@@ -221,7 +224,7 @@ int showMenuCaseOf7(){
 
 }
 
-int main() {
+int main() {  //main method
 
     const int DAYSOFWEEK = 7;
     int i,j, result, usrDayIn, usrMonthIn;
@@ -252,6 +255,7 @@ int main() {
 
     }
 
+          
     /*cout << "Eagle stand 3 Tuesday's total newspapers amount: " << companies[2].getNewspapersAmount(1) << endl;*/
 
 
@@ -262,7 +266,6 @@ int main() {
 
 
                 case 1:
-                    //function
                     result = 0;
                     for(i = 0; i < companies.size(); i++){
                         for(j = 0; j < DAYSOFWEEK; j++){
@@ -273,7 +276,6 @@ int main() {
                 break;
 
                 case 2:
-                    //function
                     result = 0;
                     for(i = 0; i < companies.size(); i++){
                         for(j = 0; j < DAYSOFWEEK; j++){
@@ -284,7 +286,6 @@ int main() {
                     break;
 
                 case 3:
-                    //function
                     result = 0;
                     for(i = 0; i < companies.size(); i++){
                         for(j = 0; j < DAYSOFWEEK; j++){
@@ -299,7 +300,6 @@ int main() {
         break;
 
         case 2:
-            //function
             if (system("CLS")) system("clear");
             result = 0;
             cout << "Total newspaper and magazines amount per company per week is: " << endl << endl;
@@ -318,7 +318,6 @@ int main() {
         case 3:
             switch(showMenuCaseOf3()){
                 case 1:
-                    //function
                     if (system("CLS")) system("clear");
                     result = 0;
                     cout << "Total newspaper amount per company per week is: " << endl << endl;
@@ -333,7 +332,6 @@ int main() {
                     break;
 
                 case 2:
-                    //function
                     if (system("CLS")) system("clear");
                     result = 0;
                     cout << "Total magazines amount per company per week is: " << endl << endl;
@@ -353,7 +351,6 @@ int main() {
         case 4:
             switch(showMenuCaseOf4()){
                 case 1:
-                    //function
                         do{
                             cout << "Enter weekday (1 for Monday - 7 for Sunday): ";
                             cin >> usrDayIn;
@@ -369,7 +366,6 @@ int main() {
                 break;
 
                 case 2:
-                    //function
                         do{
                             cout << "Enter weekday (1 for Monday - 7 for Sunday): ";
                             cin >> usrDayIn;
@@ -390,7 +386,6 @@ int main() {
         case 5:
             switch(showMenuCaseOf5()){
                 case 1:
-                    //function
                         do{
                             cout << "Enter for how many months: ";
                             cin >> usrMonthIn;
@@ -411,7 +406,6 @@ int main() {
                     break;
 
                 case 2:
-                    //function
                         do{
                             cout << "Enter for how many months: ";
                             cin >> usrMonthIn;
@@ -431,7 +425,6 @@ int main() {
                     break;
 
                 case 3:
-                    //function
                         do{
                             cout << "Enter for how many months: ";
                             cin >> usrMonthIn;
@@ -457,7 +450,6 @@ int main() {
         case 6:
             switch(showMenuCaseOf6()){
                 case 1:
-                    //function
                         do{
                             cout << "Enter for how many months: ";
                             cin >> usrMonthIn;
@@ -472,17 +464,12 @@ int main() {
                         result = 0;
                         cout << "Total newspapers amount per company for " << usrMonthIn << " months for every " << usrDayIn << " day of the week is:" << endl << endl;
                             for(i = 0; i < companies.size(); i++){
-                                //result = 0;
-
-                                //for(j = 0; j < DAYSOFWEEK; j++){
                                 result = (companies[i].getNewspapersAmount(usrDayIn-1));
-                                //}
                                 cout << endl << endl << companies[i].getName() << ": " << ((result * 4) * usrMonthIn)  << endl;
                             }
                     break;
 
                 case 2:
-                    //function
                         do{
                             cout << "Enter for how many months: ";
                             cin >> usrMonthIn;
@@ -503,7 +490,6 @@ int main() {
                     break;
 
                 case 3:
-                    //function
                         do{
                             cout << "Enter for how many months: ";
                             cin >> usrMonthIn;
@@ -532,10 +518,8 @@ int main() {
             break;
 
         case 7:
-            //submenu
             switch(showMenuCaseOf7()){
                 case 1 :
-                //function
                         do{
                             cout << "Enter for how many months: ";
                             cin >> usrMonthIn;
@@ -555,7 +539,6 @@ int main() {
                     break;
 
                 case 2 :
-                //function
                     do{
                             cout << "Enter for how many months: ";
                             cin >> usrMonthIn;
@@ -576,7 +559,6 @@ int main() {
                     break;
 
                 case 3 :
-                //function
                     do{
                             cout << "Enter for how many months: ";
                             cin >> usrMonthIn;
@@ -596,7 +578,6 @@ int main() {
                     break;
 
                 case 4 :
-                //function
                     do{
                             cout << "Enter for how many months: ";
                             cin >> usrMonthIn;
@@ -616,7 +597,6 @@ int main() {
                     break;
 
                 case 5 :
-                //function
                     do{
                             cout << "Enter for how many months: ";
                             cin >> usrMonthIn;
@@ -636,7 +616,6 @@ int main() {
                     break;
 
                 case 6 :
-                //function
                     do{
                             cout << "Enter for how many months: ";
                             cin >> usrMonthIn;
@@ -658,7 +637,7 @@ int main() {
             break;
 
 
-    }
+      }
     }
 
     cout << endl << "Return to main menu? (y/n): ";
