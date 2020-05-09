@@ -1,3 +1,5 @@
+//THIS IS A WING CHUN KUNG FU QUESTIONAIRE PROGRAM (FROM EARLY DAYS OF PROGRAMMING)
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
