@@ -10,8 +10,7 @@ int main(){
     int* pb;
     int* pc;
 
-
-    printf("\n\n0.  Αρχικές τιμές των θέσεων του πίνακα score: ");
+    printf("\n\n0.  Initial position values of score array: ");
     for(temp = 0; temp < 7; temp++){
         printf("%d  ", score[temp]);
     }
@@ -24,7 +23,7 @@ int main(){
     *pa = *pb;
     *pb = temp;
 
-    printf("\n\n1.  Αντιμετάθεση πρώτου και τελευταίου στοιχειόυ του πίνακα score: ");
+    printf("\n\n1.  Replacing the first and last element of the score array: ");
     for(temp = 0; temp < 7; temp++){
         printf("%d  ", score[temp]);
     }
@@ -32,7 +31,7 @@ int main(){
     //-----------------------------------------------------------
 
     //2
-    printf("\n\n2.  Εκτύπωση των φυσικών διευθύνσεων του κάθε κελιού του πίνακα score:\n\n");
+    printf("\n\n2.  Print the physical addresses of each cell in the score array:\n\n");
     
     for(temp = 0; temp < 7; temp++){
         printf("\tscore[%d] -> %p\n", temp,(void *) &score[temp]);
@@ -56,12 +55,12 @@ int main(){
     
     temp /= 7;
     
-    printf("\n3.  Η μέση τιμή των στοιχείων του πίνακα score ισούται με %d.", temp);
+    printf("\n3.  The average value of the data in the score array is equal to %d.", temp);
 
     //-------------------------------------------------------------
 
     //4
-    printf("\n\n4.  Εισαγωγή τριών τιμών από το χρήστη..\n");
+    printf("\n\n4.  User enters three values..\n");
     printf("\n\t1η τιμή: ");
     scanf("%d", pa);
     printf("\t2η τιμή: ");
@@ -72,21 +71,21 @@ int main(){
     //printf("%d  %d  %d", *pa, *pb, *pc);
 
     temp = ((*pa) * (*pb) * (*pc));
-    printf("\n\tΤο γινόμενο των αριθμών %d, %d και %d ισούται με %d.\n", *pa, *pb, *pc,temp);
-    printf("\n\tΕισαγωγή του γινομένου στο τελευταίο κελί του πίνακα score: ");
+    printf("\n\tThe product of the numbers %d, %d and %d is equal to %d.\n", *pa, *pb, *pc,temp);
+    printf("\n\tInsertion of the product result into the last cell of the score array: ");
 
     
     score[6] = temp;
      
-    score[5] = 9;   //λόγω buffer από την είσοδο χρήστη
-    score[4] = 1;  //λόγω buffer από την είσοδο χρήστη
+    score[5] = 9;   //due to buffer from user login
+    score[4] = 1;  //due to buffer from user login
 
     for(temp = 0; temp < 7; temp++){
         printf("%d  ", score[temp]);
     }
     
 
-    printf("\n\n\n\tΤέλος προγράμματος! (Εισάγετε <Enter> για έξοδο)..");
+    printf("\n\n\n\tEnd of program! (Press <Enter> to exit)..");
     getchar();
 
     return 0;
