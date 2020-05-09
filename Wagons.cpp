@@ -1,3 +1,5 @@
+//IN THIS PROGRAM I USE INHERITANCE
+
 #include <iostream>
 #include <string>
 
@@ -83,22 +85,22 @@ class Wagon_for_Persons : public Wagon{  //inheritance
             //------------standard methods----------------
 
         void load(int x){
-            persons += x;  //inheritance
-            Wagon:: load(x);  //inheritance
+            persons += x; 
+            Wagon:: load(x);
         }
 
         void unload(int x){
-            persons -= x;  //inheritance
-            Wagon:: unload(x);  //inheritance
+            persons -= x;  
+            Wagon:: unload(x); 
         }
 
         void printMe(){
-            cout << "\tWagon with name: " << name << " has " << persons << " Persons" << endl;  //inheritance
+            cout << "\tWagon with name: " << name << " has " << persons << " Persons" << endl;
         }
 
           //-----------------my methods------------------
 
-        void lastService(string name, int lastService){  //inheritance
+        void lastService(string name, int lastService){ 
             cout << "\t" << name << " last service: " << lastService << endl;
         }
 
@@ -108,7 +110,7 @@ class Wagon_for_Persons : public Wagon{  //inheritance
 
 };
 
-class Wagon_for_Luggages : public Wagon{  //inheritance
+class Wagon_for_Luggages : public Wagon{
 
                 //----------characteristics------------
 
@@ -164,13 +166,13 @@ class Wagon_for_Luggages : public Wagon{  //inheritance
                 //------------standard methods----------------
 
         void load(int x){
-            luggages += x;  //inheritance
-            Wagon:: load(x);  //inheritance
+            luggages += x; 
+            Wagon:: load(x);
         }
 
         void unload(int x){
-            luggages -= x;  //inheritance
-            Wagon:: unload(x);  //inheritance
+            luggages -= x;  
+            Wagon:: unload(x);
         }
 
         void printMe(){
@@ -189,7 +191,7 @@ class Wagon_for_Luggages : public Wagon{  //inheritance
 
 };
 
-class Wagon_for_Animals : public Wagon{  //inheritance
+class Wagon_for_Animals : public Wagon{ 
 
                 //-----------characteristics----------------
 
@@ -242,13 +244,13 @@ class Wagon_for_Animals : public Wagon{  //inheritance
                     //----------standard methods--------------
 
         void load(int x){
-            animals += x;  //
-            Wagon:: load(x);  //
+            animals += x;  
+            Wagon:: load(x); 
         }
 
         void unload(int x){
-            animals -= x;  //inheritance
-            Wagon:: unload(x);  //inheritance
+            animals -= x;  
+            Wagon:: unload(x);  
         }
 
         void printMe(){
