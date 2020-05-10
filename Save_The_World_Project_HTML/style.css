@@ -1,0 +1,641 @@
+body {
+	background-color: #E9F7EF;
+	font-family: sans-serif;
+	font-size: 18px;
+	line-height: 1.6;
+}
+
+#container {
+	background-color: white;
+	width: 1200px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 5px;
+}
+
+#header {
+	background-image: url("items/STW_banner.jpg");
+	background-size: cover;
+	object-fit: cover;
+	height: 228px;
+	border-radius: 5px 5px 2px 2px;
+}
+
+#content {
+	padding: 15px;
+
+}
+
+p {
+	padding-left: 50px;
+}
+
+h1, h2 {
+	padding-top: 5px;
+	padding-left: 50px;
+}
+
+a {  /*Arxiki*/
+	text-decoration: none;
+	color: #F39C12;  
+}
+
+#nav {
+	/*height: 838%;*/
+	position: absolute;
+	background: #D5F5E3;
+	margin-top: 111px;
+	padding-right: 10px;
+	width: 180px;
+	float: left;
+	padding-top: 10px;
+	border-radius: 5px;
+	text-align: center;
+}
+
+
+#nav ul {
+	list-style-type: none;
+	padding: 0;
+	font-size: 15px;
+}
+
+
+#nav h3 {    /*Arxiki*/
+	padding-bottom: 9px;
+	/*text-align: center;*/
+}
+
+li a {
+	line-height: 1.9;	
+	color: #e67e22;
+}
+
+li {
+	line-height: 1.9;
+	margin-left: 15px;
+	list-style-position: inside;
+}
+
+#mark {
+	color: #85C1E9;
+}
+
+#mainLeft {
+	color: #107896;
+	width: 600px;
+	float: right;
+	text-align: justify;
+}
+
+#main {
+	
+	width: 400px;
+	float: right;
+	margin-left: 15px;
+	margin-top: 108px;
+	border-radius: 5px;
+}
+
+.pic1 {
+	float: right;
+	margin-top: 110px;
+	margin-right: 19px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.pic2 {
+	float: right;
+	margin-top: 190px;
+	margin-right: 19px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.pic3 {
+	float: right;
+	margin-top: 260px;
+	margin-right: 19px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.pic4 {
+	float: right;
+	margin-top: 283px;
+	margin-right: 19px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.pic5 {
+	float: right;
+	margin-top: 158px;
+	margin-right: 19px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.pic6 {
+	float: right;
+	margin-top: 108px;
+	margin-right: 19px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+
+.pic7 {
+	float: right;
+	margin-top: 147px;
+	margin-right: 19px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+
+.pic8 {
+	float: right;
+	margin-top: 257px;
+	margin-right: 19px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.pic8a {
+	width: 360px;
+	height: 255px;
+	float: right;
+	margin-top: 20px;
+	margin-right: 19px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.pic9 {
+	float: right;
+	margin-top: 205px;
+	margin-right: 19px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.pic10 {
+	width: 945px;
+	height: 280px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.pic11 {
+	width: 360px;
+	height: 255px;
+	float: right;
+	margin-top: 30px;
+	margin-right: 19px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.pic12 {
+	width: 360px;
+	height: 200px;
+	float: right;
+	margin-top: 552px;
+	margin-right: 20px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.pic13 {
+	width: 360px;
+	height: 200px;
+	float: right;
+	margin-top: 30px;
+	margin-right: 20px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.pic14 {
+	width: 360px;
+	height: 200px;
+	float: right;
+	margin-top: 132px;
+	margin-right: 20px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.pic15 {
+	width: 360px;
+	height: 200px;
+	float: right;
+	margin-top: 182px;
+	margin-right: 20px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.pic16 {
+	width: 360px;
+	height: 200px;
+	float: right;
+	margin-top: 148px;
+	margin-right: 20px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.pic17 {
+	width: 360px;
+	height: 200px;
+	float: right;
+	margin-top: 178px;
+	margin-right: 20px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.pic18 {
+	width: 360px;
+	height: 200px;
+	float: right;
+	margin-top: 118px;
+	margin-right: 20px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.pic19 {
+	width: 360px;
+	height: 200px;
+	float: right;
+	margin-top: 78px;
+	margin-right: 20px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.pic20 {
+	width: 360px;
+	height: 200px;
+	float: right;
+	margin-top: 78px;
+	margin-right: 20px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.pic21 {
+	width: 360px;
+	height: 200px;
+	float: right;
+	margin-top: 38px;
+	margin-right: 20px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.pic22 {
+	width: 360px;
+	height: 200px;
+	float: right;
+	margin-top: 60px;
+	margin-right: 20px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.pic23 {
+	width: 360px;
+	height: 200px;
+	float: right;
+	margin-top: 68px;
+	margin-bottom: 90px;
+	margin-right: 20px;
+	border-radius: 10px;
+	object-fit: cover;
+}
+
+.advantages {
+	margin-top: 15px;
+}
+
+.secondList {
+	padding-top: 0px;
+}
+
+.sun {
+	padding-top: 10px;
+}
+
+.hydro {
+	padding-top: 10px;
+}
+
+.geo {
+	padding-top: 10px;
+}
+
+.air {
+	padding-top: 10px;
+}
+
+.seeWaves {
+	padding-top: 10px;
+}
+
+.tidal {
+	padding-top: 10px;
+}
+
+.ocean {
+	padding-top: 10px;
+}
+
+.snow {
+	padding-top: 10px;
+}
+
+.osmotic {
+	padding-top: 10px;
+}
+
+.hydrogen {
+	padding-top: 10px;
+}
+
+.row {
+	margin-left: 50px;
+}
+
+#footer {
+	width: 100%;
+	padding-bottom: 35px;
+	padding-top: 80px;
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table td{
+	background-color: #0C867A;
+	color: #b5c1b4;
+	width: 50%;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#footerFontSTW {
+	font-style: italic;
+}
+
+#name{
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-left: 10px;
+}
+
+#surname{
+	
+	margin-right: 10px;
+	padding-left: 10px;	
+}
+
+#email{
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-left: 10px;
+	
+	
+}
+
+#phone{
+	margin-left: 10px;
+	margin-right: 20px;
+	padding-left: 10px;		
+}
+
+#tableFooter {
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: justify;
+	width: 90%;
+	padding: 20px;
+	border-radius: 5px;
+	background-color: #27AE60;
+}
+
+
+#customerInfoName{
+	margin-left: 40px;
+	margin-right: 40px;
+	padding-bottom: 10px;
+	width: 320px;
+}
+
+#customerInfoSurname{
+	margin-left: 40px;
+	margin-right: 20px;
+	padding-bottom: 10px;
+	width: 320px;	
+}
+
+#customerInfoEmail{
+	margin-left: 40px;
+	margin-right: 40px;
+	padding-bottom: 10px;
+	width: 320px;	
+}
+
+#customerInfoPhone{
+	margin-left: 10px;
+	margin-right: 30px;
+	padding-bottom: 10px;
+	width: 320px;	
+}
+
+#sub{
+	
+    padding-right: 10px;
+    margin-left: 115px;
+    border-radius: 10px;
+}
+
+#res{
+    padding-right: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+.romanNumbers {
+	list-style-type: lower-roman;
+}
+
+.goTopBtn {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	background: #27ae60;
+	bottom: 40px;
+	right: 50px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	color: white;
+	font-size: 22px;
+	border-radius: 5px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.endLine {
+	margin-left: 40px;
+	margin-right: 30px;
+}
+
+.endLine1 {
+	margin-left: 80px;
+	margin-right: 30px;
+}
+
+.listsHeight {
+	line-height: 1.9;
+}
+
+.listsHeight {
+	line-height: 1.9;
+}
+
+.listsHeight {
+	line-height: 1.9;
+}
+
+.video {
+	margin-top: 60px;
+	margin-left: 45px;
+	object-fit: cover;
+}
+
+.solarPic {
+	width: 360px;
+	height: 250px;
+	float: right;
+	margin-top: 95px;
+	margin-right: 22px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+#item {
+	text-align: center;		
+	font-size: 14px;
+	font-style: italic;
+	text-align: justify-all;
+	margin-right: 45px;
+}
+
+.solarTent {
+	width: 360px;
+	height: 250px;
+	float: right;
+	margin-top: 120px;
+	margin-right: 22px;
+	border-radius: 5px;
+	object-fit: cover;		
+}
+
+.solarRoadway {
+	width: 360px;
+	height: 250px;
+	float: right;
+	margin-top: 38px;
+	margin-right: 22px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.solarWater {
+	width: 360px;
+	height: 250px;
+	float: right;
+	margin-top: 86px;
+	margin-right: 22px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.solarHouse {
+	width: 360px;
+	height: 250px;
+	float: right;
+	margin-top: 70px;
+	margin-right: 22px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.solarCar {
+	width: 360px;
+	height: 250px;
+	float: right;
+	margin-top: 160px;
+	margin-right: 22px;
+	border-radius: 5px;
+	object-fit: cover;
+}
+
+.solarYacht {
+	width: 360px;
+	height: 250px;
+	float: right;
+	margin-top: 50px;
+	margin-right: 22px;
+	border-radius: 5px;
+	object-fit: cover;	
+}
+
+.seaWind {
+	width: 360px;
+	height: 250px;
+	float: right;
+	margin-top: 90px;
+	margin-right: 22px;
+	border-radius: 5px;
+	object-fit: cover;	
+}
+
+.windChart {
+	width: 360px;
+	height: 250px;
+	float: right;
+	margin-top: 90px;
+	margin-right: 22px;
+	border-radius: 5px;		
+}
+
+.windBlow {
+	width: 360px;
+	height: 250px;
+	float: right;
+	margin-top: 42px;
+	margin-right: 22px;
+	border-radius: 5px;
+	object-fit: cover;	
+}
+
+.sail {
+	width: 360px;
+	height: 250px;
+	float: right;
+	margin-top: 43px;
+	margin-right: 22px;
+	border-radius: 5px;
+	object-fit: cover;	
+}
