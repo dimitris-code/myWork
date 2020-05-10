@@ -1,3 +1,5 @@
+//This program prompts the user to enter a password and checks if the given string is valid
+
 package password_check;
 
 import java.util.Scanner;
