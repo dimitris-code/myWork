@@ -1,3 +1,5 @@
+//This program does a word count, represents word characters length by descending order and, displays the index of the third longest string
+
 package elato_project;
 
 import java.util.List; 
@@ -32,7 +34,7 @@ public class Elato_Project {
 
         // DISPLAY LIST AS A STRING
         StringBuilder b = new StringBuilder();
-        String s = list.stream().map(Object::toString).collect(Collectors.joining(" "));
+        String s = list.stream().map(Object::toString).collect(Collectors.joining(" "));  //concatenate objects into a string
         System.out.println(s);
 
         // (1)
@@ -81,6 +83,8 @@ public class Elato_Project {
     public static int findPosOfThirdLongest(String[] arr){   
         String temp;
         int x = 0;
+        
+        //sort the array to find the index of third longest string
         for(int i = 0; i < arr.length; i++){
             x = i;
             for(int j = i + 1; j < arr.length; j++){
