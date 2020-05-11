@@ -1,3 +1,5 @@
+//This program check if the given strings are palindrome (avoiding the special characters)
+
 package palindrome_project;
 
 import java.util.ArrayList;
