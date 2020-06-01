@@ -23,7 +23,7 @@ int main()
 
     // Logic for entering the input data in the array and classification logic (bubble sort)
     for(i = 0; i < 4; i++){           // the first element of the array
-       for(j = i + 1; j < 4; j++){    // the next item in the array
+       for(j = i + 1; j < 4; j++){    // the next element in the array
             if(a[i] > a[j]){          // if the first element of the array is larger than the next element
                 temp = a[i];          // then set the value of the first element to 'temp'
                 a[i] = a[j];          // put in the first element the value of the next
